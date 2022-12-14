@@ -43,7 +43,8 @@ cat gau-urls.txt | grep -i "login\|singup\|admin\|dashboard\|wp-admin\|singin\|a
 🛠 Post-Mortem your Gau/Wayback result with [Gau-Expose](https://github.com/tamimhasan404/Gau-Expose) tool
 
 ### Regex for bug bounty
-- [] Description: Remove http/s from your target list very useful when your tool dosen't work with http/s like nabbu
+
+- [ ] Description: Remove http/s from your target list very useful when your tool dosen't work with http/s like nabbu
 
 ```
 cat targets.txt | sed 's/^http\(\|s\):\/\///g' > without-http.txt
