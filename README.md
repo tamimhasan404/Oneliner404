@@ -40,6 +40,7 @@ cat target-domain.txt | xargs -I@ sh -c 'curl -v --stderr - @ | grep "<\!--" && 
 ```
 cat gau-urls.txt | grep -i "login\|singup\|admin\|dashboard\|wp-admin\|singin\|adminer\|dana-na\|login/?next/=" | sort | uniq > gau-panel.txt
 ```
+🛠 Post-Mortem your Gau/Wayback result with https://github.com/tamimhasan404/Gau-Expose tool
 
 ### Regex for bug bounty
 - [ ] Description: Remove http/s from your target list very useful when your tool dosen't work with http/s like nabbu
