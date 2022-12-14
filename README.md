@@ -39,3 +39,4 @@ cat target-domain.txt | xargs -I@ sh -c 'curl -v --stderr - @ | grep "<\!--" && 
 
 ```
 cat gau-urls.txt | grep -i "login\|singup\|admin\|dashboard\|wp-admin\|singin\|adminer\|dana-na\|login/?next/=" | sort | uniq > gau-panel.txt
+```
