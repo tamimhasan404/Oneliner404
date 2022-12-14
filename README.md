@@ -40,3 +40,14 @@ cat target-domain.txt | xargs -I@ sh -c 'curl -v --stderr - @ | grep "<\!--" && 
 ```
 cat gau-urls.txt | grep -i "login\|singup\|admin\|dashboard\|wp-admin\|singin\|adminer\|dana-na\|login/?next/=" | sort | uniq > gau-panel.txt
 ```
+
+### Regex for bug bounty
+- [ ] Description: Remove http/s from your target list very useful when your tool dosen't work with http/s like nabbu
+
+```
+cat targets.txt | sed 's/^http\(\|s\):\/\///g' > without-http.txt
+```
+- [ ] Description: adding https:// or any word like admin,ftp infront of your domains.
+```
+awk '$0="https://"$0' domains.txt > add-done-domain.txt
+```
