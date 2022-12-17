@@ -54,8 +54,13 @@ cat targets.txt | sed 's/^http\(\|s\):\/\///g' > without-http.txt
 awk '$0="https://"$0' domains.txt > add-done-domain.txt
 ```
 
-- [ ] Remove garbage from gospider/wayback urls
+- [ ] Description: Remove garbage from gospider/wayback urls
 
 ```
 cat gospider.txt | sed -e 's/\.gif\|.html\|.rss\|.cfm\|.htm\|.jpg\|.mp4\|.css\|.jpeg\|.png\|.svg\|.ico\|.mp3\|.mp4//' > filter-gospider-urls.txt
+```
+- [ ] Description: `Grep only ips from a txt file`.Hidden ips may revel internal admin panel page, help in ssrf , may find interesting thing after port scan etc.
+
+```
+grep -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' text-file.txt
 ```
