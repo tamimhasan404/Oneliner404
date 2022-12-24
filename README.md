@@ -25,7 +25,7 @@ cat live-domain.txt | httpx -ip -silent -timeout 10 | grep -o '[0-9]\{1,3\}\.[0-
 - [ ] Description: Graping only cname and filter out other stuff and save them on a txt file
 
 ```
-cat all.txt | httpx -cname | unfurl -u domains | tee cname.txt
+cat domains.txt | httpx -cname -timeout 13 | cut -f2 | awk '{print $2}' | uniq | unfurl -u domains > cname.txt
 ```
 
 ## Html DEV comments grep
